@@ -19,14 +19,14 @@ leonardo.goto(-100,-20)
 
 ## 5. your code goes here
 
-# Method 1
+# Race 1
 michelangelo.forward(random.randrange(1, 101))
 leonardo.forward(random.randrange(1, 101))
 
 michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
 
-# Method 2
+# Race 2
 for i in range(10):
   michelangelo.forward(random.randrange(0, 11))
   leonardo.forward(random.randrange(0, 11))
