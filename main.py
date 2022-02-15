@@ -57,4 +57,6 @@ for sides_in_shape in sides:
     michelangelo.left(turn_angle)
   michelangelo.clear()
 
+print("Your shapes have been drawn (and cleared).")
+
 window.exitonclick()
