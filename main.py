@@ -23,13 +23,23 @@ leonardo.goto(-100,-20)
 michelangelo.forward(random.randrange(1, 101))
 leonardo.forward(random.randrange(1, 101))
 
+if michelangelo.xcor() > leonardo.xcor():
+  print("Michaelangelo won Race 1!")
+else:
+  print("Leonardo won Race 1!")
+
 michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
-
+  
 # Race 2
 for i in range(10):
   michelangelo.forward(random.randrange(0, 11))
   leonardo.forward(random.randrange(0, 11))
+
+if michelangelo.xcor() > leonardo.xcor():
+  print("Michaelangelo won Race 2!")
+else:
+  print("Leonardo won Race 2!")
 
 michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
@@ -38,10 +48,11 @@ leonardo.goto(-100,-20)
 sides = [4, 6, 9, 12]
 length = 30
 
-for i in sides:
-  turn_angle = 360/i
-  michelangelo.pendown()
-  for j in range(i):
+michelangelo.pendown()
+
+for sides_in_shape in sides:
+  turn_angle = 360/sides_in_shape
+  for number_of_turns in range(sides_in_shape):
     michelangelo.forward(length)
     michelangelo.left(turn_angle)
   michelangelo.clear()
