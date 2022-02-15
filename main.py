@@ -23,7 +23,9 @@ leonardo.goto(-100,-20)
 michelangelo.forward(random.randrange(1, 101))
 leonardo.forward(random.randrange(1, 101))
 
-if michelangelo.xcor() > leonardo.xcor():
+if michelangelo.xcor() == leonardo.xcor():
+  print("Race 1 was a tie!")
+elif michelangelo.xcor() > leonardo.xcor():
   print("Michaelangelo won Race 1!")
 else:
   print("Leonardo won Race 1!")
@@ -36,7 +38,9 @@ for i in range(10):
   michelangelo.forward(random.randrange(0, 11))
   leonardo.forward(random.randrange(0, 11))
 
-if michelangelo.xcor() > leonardo.xcor():
+if michelangelo.xcor() == leonardo.xcor():
+  print("Race 2 was a tie!")
+elif michelangelo.xcor() > leonardo.xcor():
   print("Michaelangelo won Race 2!")
 else:
   print("Leonardo won Race 2!")
