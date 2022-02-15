@@ -19,8 +19,31 @@ leonardo.goto(-100,-20)
 
 ## 5. your code goes here
 
+# Method 1
+michelangelo.forward(random.randrange(1, 101))
+leonardo.forward(random.randrange(1, 101))
+
+michelangelo.goto(-100,20)
+leonardo.goto(-100,-20)
+
+# Method 2
+for i in range(10):
+  michelangelo.forward(random.randrange(0, 11))
+  leonardo.forward(random.randrange(0, 11))
+
+michelangelo.goto(-100,20)
+leonardo.goto(-100,-20)
 
 # Part B - complete part B here
+sides = [4, 6, 9, 12]
+length = 30
 
+for i in sides:
+  turn_angle = 360/i
+  michelangelo.pendown()
+  for j in range(i):
+    michelangelo.forward(length)
+    michelangelo.left(turn_angle)
+  michelangelo.clear()
 
 window.exitonclick()
